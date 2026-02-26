@@ -1,3 +1,6 @@
+mod game;
+
 fn main() {
-    println!("Hello, world!");
+    println!("Bienvenido a Eldritch Horror en CLI!");
 }
+ 
