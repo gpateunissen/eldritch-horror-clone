@@ -1,0 +1,22 @@
+[
+  {
+    "id": 101,
+    "type": "action",
+    "description": "Otro investigador de tu elección puede realizar inmediatamente una acción adicional."
+  },
+  {
+    "id": 102,
+    "type": "passive",
+    "description": "Cuándo realices una acción de adquirir Apoyos, puedes permitir que otros investigadores obtengan cualquier carta que compres."
+  },
+  {
+    "id": 103,
+    "type": "action",
+    "description": "Tanto tú como 1 Monstruo que esté en tu casilla perdéis 1 punto de Salud."
+  },
+  {
+    "id": 104,
+    "type": "passive",
+    "description": "No puedes quedar Retrasado u obtener el Estado Detenido a menos que elijas hacerlo."
+  }
+]

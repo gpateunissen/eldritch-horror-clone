@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "type": "nature"
+  },
+  {
+    "id": 2,
+    "type": "sea"
+  },
+  {
+    "id": 4,
+    "type": "city",
+    "name": "San Francisco, Estados Unidos",
+    "special_event_id": 7
+  },
+  {
+    "id": 14,
+    "type": "city",
+    "name": "Norte de Europa"
+  }
+]

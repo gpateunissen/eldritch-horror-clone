@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "name": "Charlie Kane",
+    "traits": [101, 102],
+    "max_health": 4,
+    "max_sanity": 8,
+    "starting_location_id": 4,
+    "death_event_id": 1,
+    "insanity_event_id": 1,
+    "starting_item_ids": [10],
+    "stats": {
+      "knowledge": 2,
+      "influence": 4,
+      "observation": 3,
+      "strength": 2,
+      "willpower": 2
+    },
+    "fluff": {
+      "profession": "El político",
+      "backstory": "Un político incansable...",
+      "catchphrase": "Puede arreglarse. Es cuestión de que las condiciones sean aceptables."
+    }
+  },
+  {
+    "id": 2,
+    "name": "Mark Harrigan",
+    "traits": [103, 104],
+    "max_health": 8,
+    "max_sanity": 4,
+    "starting_location_id": 14,
+    "death_event_id": 2,
+    "insanity_event_id": 2,
+    "starting_item_ids": [12, 13],
+    "stats": {
+      "knowledge": 1,
+      "influence": 2,
+      "observation": 2,
+      "strength": 4,
+      "willpower": 4
+    },
+    "fluff": {
+      "profession": "El soldado",
+      "backstory": "Un soldado incansable...",
+      "catchphrase": "Voy a salir por esa puerta llevándome este libro. Si alguien quiere detenerme, es libre de intentarlo."
+    }
+  }
+]
