@@ -1,5 +1,4 @@
-use create::game::data::investigatorDefinition::InvestigatorDefinition;
-
+use crate::game::data::investigator_definition::InvestigatorDefinition;
 
 #[derive(Debug)]
 pub struct InvestigatorInstance {
