@@ -1,2 +1,2 @@
-pub mod player;
-pub mod game_state; 
+pub mod data;
+pub mod state; 
