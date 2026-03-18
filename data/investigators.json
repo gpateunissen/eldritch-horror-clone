@@ -8,7 +8,7 @@
     "starting_location_id": 4,
     "death_event_id": 1,
     "insanity_event_id": 1,
-    "starting_item_ids": [10],
+    "starting_item_ids": [1],
     "stats": {
       "knowledge": 2,
       "influence": 4,
@@ -31,7 +31,7 @@
     "starting_location_id": 14,
     "death_event_id": 2,
     "insanity_event_id": 2,
-    "starting_item_ids": [12, 13],
+    "starting_item_ids": [2, 3],
     "stats": {
       "knowledge": 1,
       "influence": 2,

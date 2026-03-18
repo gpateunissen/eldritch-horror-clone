@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Asistente Personal",
+    "cost": 2,
+    "type": "Apoyo",
+    "clase": ["Aliado"],
+    "Text": "Gana +1 Influencia, Puedes volver a tirar un dado cuando resuelvas una prueba de Influencia.",
+    "Effect": "Gana +1 Influencia, Puedes volver a tirar un dado cuando resuelvas una prueba de Influencia."
+  },
+  {
+    "id": 2,
+    "name": ".38 Revolver",
+    "cost": 1,
+    "type": "Apoyo",
+    "clase": ["Objeto", "Arma"],
+    "Text": "Gana +2 Fuerza durante Encuentros de Combate",
+    "Effect": "Gana +2 Fuerza durante Encuentros de Combate"
+  },
+  {
+    "id": 3,
+    "name": "Keroseno",
+    "cost": 1,
+    "type": "Apoyo",
+    "clase": ["Objeto"],
+    "Text": "Puedes descartar esta carta para ganar +5 de Fuerza durante un Encuentro de Combate",
+    "Effect": "Puedes descartar esta carta para ganar +5 de Fuerza durante un Encuentro de Combate"
+  }
+]
