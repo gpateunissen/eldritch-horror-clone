@@ -44,5 +44,120 @@
       "backstory": "Un soldado incansable...",
       "catchphrase": "Voy a salir por esa puerta llevándome este libro. Si alguien quiere detenerme, es libre de intentarlo."
     }
-  }
+  },
+  {
+    "id": 3,
+    "name": "Lilly Chen",
+    "traits": [103, 104],
+    "max_health": 6,
+    "max_sanity": 6,
+    "starting_location_id": 1,
+    "death_event_id": 2,
+    "insanity_event_id": 2,
+    "starting_item_ids": [4, 5],
+    "stats": {
+      "knowledge": 2,
+      "influence": 2,
+      "observation": 2,
+      "strength": 4,
+      "willpower": 3
+    },
+    "fluff": {
+      "profession": "La artista marcial",
+      "backstory": "aaaa",
+      "catchphrase": "Llevo toda la vida preparándome para enfrentarme a este mal. Mi concentración debe ser absoluta."
+    }
+  },
+  {
+    "id": 4,
+    "name": "Trish Scarborough",
+    "traits": [103, 104],
+    "max_health": 7,
+    "max_sanity": 5,
+    "starting_location_id": 16,
+    "death_event_id": 2,
+    "insanity_event_id": 2,
+    "starting_item_ids": [6],
+    "stats": {
+      "knowledge": 1,
+      "influence": 3,
+      "observation": 4,
+      "strength": 3,
+      "willpower": 2
+    },
+    "fluff": {
+      "profession": "La espía",
+      "backstory": "aaa",
+      "catchphrase": "Mentimos todo el rato. Pero la verdad está ahí. Sólo tienes que saber cómo descifrar a la gente." 
+    }
+  },
+  {
+    "id": 5,
+    "name": "Leo Anderson",
+    "traits": [103, 104],
+    "max_health": 6,
+    "max_sanity": 6,
+    "starting_location_id": 1,
+    "death_event_id": 2,
+    "insanity_event_id": 2,
+    "starting_item_ids": [7],
+    "stats": {
+      "knowledge": 2,
+      "influence": 2,
+      "observation": 3,
+      "strength": 3,
+      "willpower": 3
+    },
+    "fluff": {
+      "profession": "Lider de la expedición",
+      "backstory": "Un soldado incansable...",
+      "catchphrase": "No os paréis. Podéis morir cuando no sea asunto mío." 
+    }
+  },
+  {
+    "id": 6,
+    "name": "Jacqueline Pine",
+    "traits": [103, 104],
+    "max_health": 4,
+    "max_sanity": 8,
+    "starting_location_id": 5,
+    "death_event_id": 2,
+    "insanity_event_id": 2,
+    "starting_item_ids": [8, 9],
+    "stats": {
+      "knowledge": 4,
+      "influence": 2,
+      "observation": 3,
+      "strength": 1,
+      "willpower": 3
+    },
+    "fluff": {
+      "profession": "La psíquica",
+      "backstory": "Un soldado incansable...",
+      "catchphrase": "Las visiones son un aviso. El futuro se puede reescribir."
+    }
+  },
+  {
+    "id": 7,
+    "name": "Akachi Onyele",
+    "traits": [103, 104],
+    "max_health": 5,
+    "max_sanity": 7,
+    "starting_location_id": 15,
+    "death_event_id": 2,
+    "insanity_event_id": 2,
+    "starting_item_ids": [10, 11],
+    "stats": {
+      "knowledge": 3,
+      "influence": 2,
+      "observation": 2,
+      "strength": 2,
+      "willpower": 4
+    },
+    "fluff": {
+      "profession": "La Chaman",
+      "backstory": "Un soldado incansable...",
+      "catchphrase": "Voy a salir por esa puerta llevándome este libro. Si alguien quiere detenerme, es libre de intentarlo."
+    }
+  },
 ]
