@@ -1,17 +1,25 @@
 mod game;
 
-use crate::game::data::investigator_definition::InvestigatorDefinition;
-use crate::game::state::investigator_instance::InvestigatorInstance;
+use rand::Rng;
 use serde_json;
 use std::fs;
 
-use std::io::{self, Write};
+use crate::game::data::monster_definition::MonsterDefinition;
+use crate::game::logic::combat::fight;
+use crate::game::data::investigator_definition::InvestigatorDefinition;
+use crate::game::state::investigator_instance::InvestigatorInstance;
+
+use std::io::{ self, Write };
 fn main() {
     println!("Bienvenido a Eldritch Horror en CLI!");
 
-    let data = fs::read_to_string("data/investigators.json").expect("No se pudo leer investigators.json");
+    let data = fs
+        ::read_to_string("data/investigators.json")
+        .expect("No se pudo leer investigators.json");
 
-    let definitions: Vec<InvestigatorDefinition> = serde_json::from_str(&data).expect("Error parseando JSON");
+    let definitions: Vec<InvestigatorDefinition> = serde_json
+        ::from_str(&data)
+        .expect("Error parseando JSON");
 
     println!("Elige tu investigador: ");
     for def in &definitions {
@@ -22,8 +30,8 @@ fn main() {
     io::stdout().flush().unwrap();
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Error leyendo la entrada");
-    let input_id: i32 = match input.trim().parse(){
-        Ok(num) => num, 
+    let input_id: i32 = match input.trim().parse() {
+        Ok(num) => num,
         Err(_) => {
             println!("Entrada no valida");
             return;
@@ -41,9 +49,7 @@ fn main() {
     println!("Introduce tu nombre de jugador: ");
     io::stdout().flush().unwrap();
     let mut player_name = String::new();
-    io::stdin()
-        .read_line(&mut player_name)
-        .expect("Error leyendo el nombre");
+    io::stdin().read_line(&mut player_name).expect("Error leyendo el nombre");
     let player_name = player_name.trim().to_string();
 
     let instance = InvestigatorInstance {
@@ -82,7 +88,25 @@ fn main() {
         observación={} 
         fuerza={} 
         voluntad={}",
-        s.knowledge, s.influence, s.observation, s.strength, s.willpower
-    );  
+        s.knowledge,
+        s.influence,
+        s.observation,
+        s.strength,
+        s.willpower
+    );
+
+    let monster_data = fs
+        ::read_to_string("data/monsters.json")
+        .expect("No se pudo leer monsters.json");
+
+    let monsters: Vec<MonsterDefinition> = serde_json
+        ::from_str(&monster_data)
+        .expect("Error parseando monsters");
+
+    let mut rng = rand::thread_rng();
+    let monster = &monsters[rng.gen_range(0..monsters.len())];
+
+    let mut instance = instance;
+
+    fight(&mut instance, chosen_def, monster);
 }
- 

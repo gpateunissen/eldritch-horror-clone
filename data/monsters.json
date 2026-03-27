@@ -10,7 +10,7 @@
     "Effect": "Cuando este monstruo entre en juego, muevelo a 'Las Piramides'"
   },
   {
-    "id": 1,
+    "id": 2,
     "name": "Cthoniano",
     "Sanity_test": -2,
     "Sanity_dmg": 2,
