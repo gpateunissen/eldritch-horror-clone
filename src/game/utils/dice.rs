@@ -1,8 +1,8 @@
 use rand::Rng;
 
-pub fn roll_dice(num_dice: i32) -> Vex<i32>{
+pub fn roll_dice(num_dice: i32) -> Vec<i32>{
     let mut rng = rand::thread_rng();
-    let mut results = Vex::new();
+    let mut results = Vec::new();
 
     for _ in 0..num_dice{
         let roll = rng.gen_range(1..=6);

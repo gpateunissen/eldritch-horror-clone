@@ -14,64 +14,75 @@ pub fn fight(
     //Instancia monstruo
     let mut monster_instance = MonsterInstance {
         name: monster.name.clone(),
-        current_toughness: monster.Toughness,
-        sanity_dmg: monster.Sanity_dmg,
-        strength_dmg: monster.Strength_dmg,
-        sanity_test: monster.Sanity_test,
-        strength_test: monster.Str_test,
+        current_toughness: monster.toughness,
+        sanity_dmg: monster.sanity_dmg,
+        strength_dmg: monster.strength_dmg,
+        sanity_test: monster.sanity_test,
+        strength_test: monster.str_test,
     };
 
-    // 🧠 FASE 1: Willpower.
-    let willpower = def.stats.willpower + investigator.stat_modifiers.willpower;
-    let dice = willpower + monster.Sanity_test;
+    while
+        investigator.current_health > 0 &&
+        investigator.current_sanity > 0 &&
+        monster_instance.current_toughness > 0
+    {
+        // 🧠 FASE 1: Willpower.
+        let willpower = def.stats.willpower + investigator.stat_modifiers.willpower;
+        let dice = (willpower + monster_instance.sanity_test).max(1);
+        println!("\nPrueba de voluntad: {} dados", dice);
 
-    println!("\nPrueba de voluntad: {} dados", dice);
+        let rolls = roll_dice(dice);
+        println!("Tiradas: {:?}", rolls);
 
-    let rolls = roll_dice(dice.max(1));
-    println!("Tiradas: {:?}", rolls);
+        let successes = count_successes(&rolls);
 
-    let successes = count_successes(&rolls);
-
-    if successes == 0 {
-        println!("Fallaste la prueba de voluntad 😱");
-        investigator.current_sanity -= monster.Sanity_dmg;
-        println!("Pierdes {} de cordura", monster.Sanity_dmg);
-    } else {
-        println!("Superaste la prueba de voluntad 👍");
-    }
-
-    if investigator.current_sanity <= 0 {
-        println!("Has perdido toda la cordura!");
-        return;
-    }
-
-    // 🧠 FASE 1: Combat.
-    let strength = def.stats.strength + investigator.stat_modifiers.strength;
-
-    println!("\nPrueba de fuerza: {} dados", dice);
-
-    let rolls = roll_dice(dice.max(1));
-    println!("Tiradas: {:?}", rolls);
-
-    let successes = count_successes(&rolls);
-
-    if successes > 0 {
-        println!("Haces daño al monstruo 🩸");
-        if successes >= monster.Toughness {
-            println!("🎉 Has derrotado al monstruo!");
+        if successes == 0 {
+            println!("Fallaste la prueba de voluntad 😱");
+            investigator.current_sanity -= monster_instance.sanity_dmg;
+            println!("Pierdes {} de cordura", monster_instance.sanity_dmg);
+            if investigator.current_sanity <= 0 {
+                println!("Has perdido toda la cordura! \n === FIN DEL COMBATE ===");
+                return;
+            }
+            println!("{} puntos de cordura restantes", investigator.current_sanity);
         } else {
-            println!("El monstruo resiste...");
+            println!("Superaste la prueba de voluntad 👍");
         }
-    } else {
-        println!("Fallaste el ataque 💥");
-        investigator.current_health -= monster.Strength_dmg;
-        println!("Recibes {} de daño", monster.Strength_dmg);
-    }
 
-    if investigator.current_health <= 0 {
-        println!("💀 Has muerto");
-        return;
-    }
+        // 💪 FASE 1: Combat.
+        let strength = def.stats.strength + investigator.stat_modifiers.strength;
+        let dice = (strength + monster_instance.strength_test).max(1);
 
-    println!("\n=== FIN DEL COMBATE ===");
+        println!("\nPrueba de fuerza: {} dados", dice);
+
+        let rolls = roll_dice(dice);
+        println!("Tiradas: {:?}", rolls);
+
+        let successes = count_successes(&rolls);
+
+        if successes > 0 {
+            println!("Haces daño al monstruo 🩸");
+            monster_instance.current_toughness -= successes;
+
+            if monster_instance.current_toughness <= 0 {
+                println!("🎉 Has derrotado al monstruo! \n === FIN DEL COMBATE ===");
+            } else {
+                println!(
+                    "El monstruo resiste... le queda {} de vida",
+                    monster_instance.current_toughness
+                );
+            }
+        } else {
+            println!("Fallaste el ataque 💥");
+            investigator.current_health -= monster_instance.strength_dmg;
+            println!("Recibes {} de daño", monster_instance.strength_dmg);
+            if investigator.current_health <= 0 {
+                println!("💀 Has muerto \n === FIN DEL COMBATE ===");
+                return;
+            }
+            println!("{} puntos de salud restantes", investigator.current_health);
+        }
+
+        println!("\n=== FIN DE RONDA DE COMBATE ===");
+    }
 }

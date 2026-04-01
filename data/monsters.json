@@ -2,33 +2,33 @@
   {
     "id": 1,
     "name": "Momia",
-    "Sanity_dmg": 2,
-    "Str_test": -2,
-    "Strength_dmg": 2,
-    "Toughness": 3,
-    "Effect_type": "Entrada",
-    "Effect": "Cuando este monstruo entre en juego, muevelo a 'Las Piramides'"
+    "sanity_dmg": 2,
+    "str_test": -2,
+    "strength_dmg": 2,
+    "toughness": 3,
+    "effect_type": "Entrada",
+    "effect": "Cuando este monstruo entre en juego, muevelo a 'Las Piramides'"
   },
   {
     "id": 2,
     "name": "Cthoniano",
-    "Sanity_test": -2,
-    "Sanity_dmg": 2,
-    "Str_test": -2,
-    "Strength_dmg": 3,
-    "Toughness": 4,
-    "Effect_type": "Entrada",
-    "Effect": "Cuando este monstruo entre en juego, muevelo a 'El Corazón de África'"
+    "sanity_test": -2,
+    "sanity_dmg": 2,
+    "str_test": -2,
+    "strength_dmg": 3,
+    "toughness": 4,
+    "effect_type": "Entrada",
+    "effect": "Cuando este monstruo entre en juego, muevelo a 'El Corazón de África'"
   },
   {
     "id": 3,
     "name": "Hombre Serpiente",
-    "Sanity_test": -2,
-    "Sanity_dmg": 2,
-    "Str_test": -2,
-    "Strength_dmg": 3,
-    "Toughness": 4,
-    "Effect_type": "Entrada",
-    "Effect": "Cuando este monstruo entre en juego, muevelo a 'El Corazón de África'"
+    "sanity_test": -2,
+    "sanity_dmg": 2,
+    "str_test": -2,
+    "strength_dmg": 3,
+    "toughness": 4,
+    "effect_type": "Entrada",
+    "effect": "Cuando este monstruo entre en juego, muevelo a 'El Corazón de África'"
   }
 ]
