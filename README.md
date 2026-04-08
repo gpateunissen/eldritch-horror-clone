@@ -1,4 +1,4 @@
-# Eldritch Horror Clone
+# Eldritch Horror Clone - BackEnd
 
 **Personal Rust Project – For Learning Purposes Only**
 
