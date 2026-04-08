@@ -17,4 +17,4 @@ See the [LICENSE](./LICENSE) file for details.
 
 ---
 
-*Created by GeryNyan, 2026.*
+*Created by gpateunissen, 2026.*
